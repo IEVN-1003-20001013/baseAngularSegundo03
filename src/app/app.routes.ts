@@ -2,9 +2,9 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'aporb',
+    path: 'distancia',
     loadChildren: () =>
-      import('./aporb/aporb.routes').then((m) => m.default)
+      import('./formularios/distancia/distancia.routes').then((m) => m.default)
   },
   {
     path: 'chino',
@@ -12,13 +12,18 @@ export const routes: Routes = [
       import('./chino/chino.routes').then((m) => m.default)
   },
   {
-    path: 'distancia',
+    path: 'aporb',
     loadChildren: () =>
-      import('./formularios/distancia/distancia.routes').then((m) => m.default)
+      import('./aporb/aporb.routes').then((m) => m.default)
+  },
+  {
+    path: 'utl',
+    loadChildren: () =>
+      import('./utl/utl.routes').then((m) => m.default)
   },
   {
     path: '',
-    redirectTo: 'distancia',  // carga "distancia" por defecto
+    redirectTo: 'distancia',
     pathMatch: 'full'
   }
 ];
