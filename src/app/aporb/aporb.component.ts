@@ -33,3 +33,5 @@ export class AporbComponent {
     this.proceso = this.operacion.proceso;
   }
 }
+
+

@@ -51,3 +51,4 @@ export class Chinoformula {
     return this.signo;
   }
 }
+

@@ -62,3 +62,4 @@ export class ChinoComponent {
     this.resultado = 'que tal ' + this.formulario.value.nombre + ' ' + this.formulario.value.apellidoP + ' ' + this.formulario.value.apellidoM;
   }
 }
+

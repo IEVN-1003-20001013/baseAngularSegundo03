@@ -19,3 +19,4 @@ export class DistanciaFormula {
     return Math.sqrt(this.dx * this.dx + this.dy * this.dy);
   }
 }
+

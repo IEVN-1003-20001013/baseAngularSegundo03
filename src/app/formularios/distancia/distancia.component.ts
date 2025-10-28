@@ -34,3 +34,4 @@ export class DistanciaComponent {
     this.distanciaResultado = Number(this.operacion.calcular().toFixed(2));
   }
 }
+
