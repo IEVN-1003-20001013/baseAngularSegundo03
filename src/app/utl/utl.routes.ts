@@ -1,24 +1,25 @@
 import { Routes } from '@angular/router';
 
-export default [
+export const UtlRoutes: Routes = [
+  {
+    path: 'listaalumnos',
+
+    loadComponent: () =>
+      import('./alumnos/alumnos.component').then(c => c.AlumnosComponent)
+  },
   {
     path: 'agregar',
     loadComponent: () =>
-      import('../utl/agregar/agregar.component').then((c) => c.AgregarComponent)
+      import('./agregar/agregar.component').then(c => c.default)
   },
   {
-    path: 'editar',
+    path: 'editar/:id',
     loadComponent: () =>
-      import('../utl/editar/editar.component').then((c) => c.EditarComponent)
+      import('./editar/editar.component').then(c => c.default)
   },
   {
-    path: 'eliminar',
+    path: 'eliminar/:id',
     loadComponent: () =>
-      import('../utl/eliminar/eliminar.component').then((c) => c.EliminarComponent)
-  },
-  {
-    path: 'alumnos',
-    loadComponent: () =>
-      import('../utl/alumnos/alumnos.component').then((c) => c.AlumnosComponent)
+      import('./eliminar/eliminar.component').then(c => c.default)
   }
-] as Routes;
+];

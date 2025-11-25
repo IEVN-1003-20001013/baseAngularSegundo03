@@ -1,1 +1,33 @@
-<p>agregar works!</p>
+<form class="container mt-4" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+    <label>Matricula</label>
+    <input type="number" class="form-control" formControlName="matricula">
+  </div>
+
+  <div class="mb-3">
+    <label>Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre">
+  </div>
+
+  <div class="mb-3">
+    <label>Apellido Paterno</label>
+    <input type="text" class="form-control" formControlName="apaterno">
+  </div>
+
+  <div class="mb-3">
+    <label>Apellido Materno</label>
+    <input type="text" class="form-control" formControlName="amaterno">
+  </div>
+
+  <div class="mb-3">
+    <label>Correo</label>
+    <input type="email" class="form-control" formControlName="correo">
+  </div>
+
+  <button class="btn btn-primary" type="submit">Guardar</button>
+  <button class="btn btn-secondary" [routerLink]="['/utl/listaalumnos']" type="button">
+    Cancelar
+  </button>
+
+</form>

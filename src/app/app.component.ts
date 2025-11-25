@@ -1,17 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DistanciaComponent } from "./formularios/distancia/distancia.component";
-import { DistanciaFormula } from './formularios/distancia/distanciaformula';
 import { ChinoComponent } from './chino/chino.component';
 import { AporbComponent } from "./aporb/aporb.component";
-import {initFlowbite} from 'flowbite'
 import { NavbarComponent } from "./navbar/navbar.component";
 import { TemhComponent } from "./tem/temh/temh.component";
-
+import { AlumnosComponent } from './utl/alumnos/alumnos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DistanciaComponent, ChinoComponent, AporbComponent, NavbarComponent, TemhComponent],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    ReactiveFormsModule,
+    UpperCasePipe,
+    DistanciaComponent,
+    ChinoComponent,
+    AporbComponent,
+    NavbarComponent,
+    TemhComponent,
+    AlumnosComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
